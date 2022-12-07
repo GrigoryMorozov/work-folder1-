@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{	
+	padding: 50px;
+	font-size: 20px;
+}
+
+button{
+	width: 150px;
+	height:50px;
+	margin: 2rem;
+}
+.a{
+	
+	background: linear-gradient(356deg, rgba(84,176,82,1) 0%, rgba(25,14,110,1) 55%, rgba(5,5,5,1) 100%);
+	color:white;
+	border-top: 5px double red;
+	outline: 6px solid black;
+	border-radius: 20px;	
+	transition: background .8s ease;
+}
+
+.a:hover{
+	background: linear-gradient(356deg, rgba(84,176,82,1) 60%, rgba(25,14,110,0.8071603641456583) 100%, rgba(5,5,5,1) 100%);
+}
+
+.b{
+	background: radial-gradient(circle, rgba(176,102,82,1) 0%, rgba(25,14,110,1) 100%);
+	color: #ffd40d;
+	box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    
+    border-top: 16px solid yellow;
+    border-bottom: 16px solid grey;
+    border-radius: 10px;
+    border-left: 8px solid green;
+    border-right: 8px solid green;
+    outline: 4px double red;
+    transition: all .5s ease;
+}
+
+.b:hover{
+	border-top: 8px solid yellow;
+    border-bottom: 8px solid grey;
+    color: red;
+}
+
+.c{
+	background: radial-gradient(circle, rgba(176,102,82,1) 0%, rgba(9,127,250,0) 100%);
+	border:none;
+	position: relative;
+	outline: 30px solid black;
+	color:black;
+	transition: all .5s ease;
+}
+
+.c::after{
+	content: '';
+	position: absolute;
+	top:-15px;
+	left: 6px;
+	transform: rotate(45deg);
+	width: 8px;
+	height: 50px;
+	background-color: red;
+	box-shadow:  7px 7px 13px #bebebe,
+             -7px -7px 13px #ffffff;
+}
+.c::before{
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	right: 6px;
+	transform: rotate(45deg);
+	width: 8px;
+	height: 50px;
+	background-color: red;
+	box-shadow:  7px 7px 13px #bebebe,
+             -7px -7px 13px #ffffff;
+}
+.c:hover::after{
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	transition: all .5s linear;
+}
+.c:hover::before{
+	
+	bottom: -15px;
+	right: 6px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	transition: all .5s ease;
+	
+}
+.c:hover{
+	outline: 30px solid black;
+	border-radius: 50%;
+	width: 150px;
+	height:150px;
+}
+
+/*стилизация меню навигации*/
+nav{
+	width: 40%;
+	margin: 50px 100px;
+}
+
+li{
+	list-style-type: none;
+}
+
+
+/*сссылка строчкая, чтобы занимала всю ширину надо преобразовать её в блочный элемент, также текст можно расположить равномерно по центру, для этого высоту элемента и высоту строки одинаковыми делаем*/
+a{
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	height: 2em;
+	line-height: 2em;
+	border-left: 4px solid green;
+	border-top: 1px dotted black;
+	border-right: 1px dotted black;
+	border-bottom:1px dotted black;
+	padding-left: 10px;
+	transition: all .5s ease;
+}
+
+a:hover{
+	background-color: red;
+}
