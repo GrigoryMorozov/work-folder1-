@@ -1,0 +1,70 @@
+*,::before, ::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background: rgb(82,101,176);
+	background: radial-gradient(circle, rgba(82,101,176,1) 0%, rgba(25,14,110,1) 55%, rgba(5,5,5,1) 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+
+
+img{
+	max-width: 100%;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.img{
+	width: 30%;
+	height: 30%;
+
+	position: absolute;
+	z-index: 10;
+	top: 40%;
+	left: 35%;
+}
+
+
+.box{
+	width: 80%;
+	margin: 5% auto;
+}
+
+.text__box{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 ;
+
+}
+.text{
+	background-color: #D9D9D9;
+	padding: 1rem 1.2rem;
+	border-radius: 20px;
+	width: 40%;
+}
+
+.about_price{
+	order:3;
+	align-self: flex-end;
+	margin-bottom: 2rem;
+}
+
+.link{
+	order: 4;
+	align-self: flex-start;
+	margin: 4rem 0 0 0;
+	padding-left: 2em;
+}
+.about_course{
+	align-self: flex-end;
+}
