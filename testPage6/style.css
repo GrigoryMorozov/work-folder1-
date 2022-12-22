@@ -30,9 +30,14 @@ body, html, .box, .wrapper{
 }
 img{
 	max-width: 100%;
+	
+	
 }
+
+
+
 .wrapper{
-	max-width: 1024px;
+	max-width: 1150px;
 	margin: 0 auto;
 	
 }
@@ -71,11 +76,12 @@ main{
 	flex: 1 0 auto;
 	padding-top: 1.7rem;
 	padding-bottom: 1.7rem;
-	padding-left: 3.80859375%;
+	/*padding-left: 3.80859375%;*/
 	display: flex;
 }
 article{
-	width: 70%;
+	width: 75%;
+	padding: 0 10px 0 10px;
 }
 
 .article__header{
@@ -97,26 +103,195 @@ ol{
 }
 
 aside{
-	width: 29%;
+	width: 25%;
 	height: 80vh;
-	border-right: 5px dotted black;
+	/*border-right: 5px dotted black;*/
 	border-left: 5px dotted black;
 	padding: 0 10px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .aside__box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 95%;
-	height: 200px;
+	
 	background-color: black;
 	color: white;
 	margin-bottom: 10px;
+
+	position: relative;
+
+
 }
+.ECI::after{
+	content: "Екатерина I 1725-1727";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.ECI:hover::after{
+	opacity: 1;
+
+}
+
+.PII::after{
+	content: "Пётр II 1727-1730";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.PII:hover::after{
+	opacity: 1;
+
+}
+
+.AI::after{
+	content: "Анна Иоановна 1730-1740";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.AI:hover::after{
+	opacity: 1;
+
+}
+.IA::after{
+	content: "Иоанн VI 1740-1741";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.IA:hover::after{
+	opacity: 1;
+
+}
+
+.EP::after{
+	content: "Елизавета Петровна 1741-1761";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.EP:hover::after{
+	opacity: 1;
+
+}
+.PIII::after{
+	content: "Пётр III 1761-1762";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.PIII:hover::after{
+	opacity: 1;
+
+}
+.EII::after{
+	content: "Екатерина II 1762-1796";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: rgb(0%, 0%, 0%, 0.6);
+	
+	font-size: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	top:70%;
+	transition: all.4s linear;
+}
+.EII:hover::after{
+	opacity: 1;
+
+}
+
 footer{
 	flex: 0 0 auto;
 	height: 50px;
 	width: 100%;
 	background-color: black;
+	color: white;
+	
+	font-size: .8rem;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+	position: relative;
+
+}
+
+footer::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background-color: black;
+	top:-10px;
 
 }
