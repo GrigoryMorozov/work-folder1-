@@ -1,136 +1,129 @@
-*{
+*,::before, ::after{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body{	
-	padding: 50px;
-	font-size: 20px;
-}
+ body {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	width: 100%;
+ 	height: 100vh;
+ 	position: relative;
+ 	background-color: black;
 
-button{
-	width: 150px;
-	height:50px;
-	margin: 2rem;
-}
-.a{
-	
-	background: linear-gradient(356deg, rgba(84,176,82,1) 0%, rgba(25,14,110,1) 55%, rgba(5,5,5,1) 100%);
-	color:white;
-	border-top: 5px double red;
-	outline: 6px solid black;
-	border-radius: 20px;	
-	transition: background .8s ease;
-}
+ }
 
-.a:hover{
-	background: linear-gradient(356deg, rgba(84,176,82,1) 60%, rgba(25,14,110,0.8071603641456583) 100%, rgba(5,5,5,1) 100%);
-}
-
-.b{
-	background: radial-gradient(circle, rgba(176,102,82,1) 0%, rgba(25,14,110,1) 100%);
-	color: #ffd40d;
-	box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
-    
-    border-top: 16px solid yellow;
-    border-bottom: 16px solid grey;
-    border-radius: 10px;
-    border-left: 8px solid green;
-    border-right: 8px solid green;
-    outline: 4px double red;
-    transition: all .5s ease;
-}
-
-.b:hover{
-	border-top: 8px solid yellow;
-    border-bottom: 8px solid grey;
-    color: red;
-}
-
-.c{
-	background: radial-gradient(circle, rgba(176,102,82,1) 0%, rgba(9,127,250,0) 100%);
-	border:none;
-	position: relative;
-	outline: 30px solid black;
-	color:black;
-	transition: all .5s ease;
-}
-
-.c::after{
-	content: '';
+.sun{
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 	position: absolute;
-	top:-15px;
-	left: 6px;
-	transform: rotate(45deg);
-	width: 8px;
-	height: 50px;
-	background-color: red;
-	box-shadow:  7px 7px 13px #bebebe,
-             -7px -7px 13px #ffffff;
+	top:calc(50%-100px);
+	left: calc(50%-100px);
+	border-radius: 50%;
+	box-shadow: 4px 4px 66px 64px rgba(176, 54, 81, 0.4);
+	animation: loader 5s linear infinite;
 }
-.c::before{
-	content: '';
+ .loader{
+ 	width: 600px;
+ 	height: 600px;
+ 	border: 2px solid transperent;
+ 	border-radius: 50%;
+ 	position: relative;
+ 	animation-fill-mode: forwards;
+ 	z-index: 100;
+ 
+ 	animation: loader 10s linear infinite;
+ 	
+ }
+
+ .loader::before{
+ 	content:'';
+ 	position: absolute;
+ 	width: 80px;
+ 	height: 80px;
+ 	background-color: #B0E0E6;
+ 	border-radius:50%;
+ 	box-shadow: 4px 4px 40px 20px rgba(51, 121, 174,1),
+ 				4px 4px 100px 31px rgba(255, 255, 0, 0.8);
+
+
+ }
+
+.mercuri{
+	width: 450px;
+	height: 450px;
+	border: 1px solid transperent;
+	border-radius: 50%;
+	animation: loader 3s linear infinite;
 	position: absolute;
-	bottom: -15px;
-	right: 6px;
-	transform: rotate(45deg);
-	width: 8px;
+}
+.mercuri::before{
+	content: '';
+	width: 50px;
 	height: 50px;
-	background-color: red;
-	box-shadow:  7px 7px 13px #bebebe,
-             -7px -7px 13px #ffffff;
-}
-.c:hover::after{
-	width: 32px;
-	height: 32px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	background-color: grey;
 	border-radius: 50%;
-	transition: all .5s linear;
+	box-shadow: 4px 4px 40px 20px rgba(51, 121, 174,0.4),
+ 				4px 4px 100px 31px rgba(255, 255, 0, 0.8);	
+
 }
-.c:hover::before{
-	
-	bottom: -15px;
-	right: 6px;
-	width: 32px;
-	height: 32px;
+
+.eath{
+	width: 900px;
+	height: 900px;
+	border: 1px solid transperent;
 	border-radius: 50%;
-	transition: all .5s ease;
-	
+	position: absolute;
+	z-index: 10;
+	animation: loader 20s linear infinite;
+
 }
-.c:hover{
-	outline: 30px solid black;
+.eath::after{
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: white;
 	border-radius: 50%;
+	animation: moon 2s linear infinite;
+	animation-direction: alternate;
+	z-index: 5;
+}
+
+.eath::before{
+	content:'';
+	position: absolute;
+	top:0;
+	left: 20px;
 	width: 150px;
-	height:150px;
+	height: 150px;
+	background-color: blue;
+	border-radius: 50%;
+	box-shadow: 4px 4px 40px 20px rgba(51, 121, 174,1),
+ 				4px 4px 100px 31px rgba(255, 255, 0, 0.8);	
 }
 
-/*стилизация меню навигации*/
-nav{
-	width: 40%;
-	margin: 50px 100px;
-}
+ @keyframes loader {
+ 	100%{
+ 		transform: rotate(360deg);
+ 	}
+ }
 
-li{
-	list-style-type: none;
-}
+ @keyframes moon{
+ 	0%{
+ 		transform: translate(10px, 10px)
+ 	}
 
 
-/*сссылка строчкая, чтобы занимала всю ширину надо преобразовать её в блочный элемент, также текст можно расположить равномерно по центру, для этого высоту элемента и высоту строки одинаковыми делаем*/
-a{
-	display: block;
-	text-decoration: none;
-	color: inherit;
-	height: 2em;
-	line-height: 2em;
-	border-left: 4px solid green;
-	border-top: 1px dotted black;
-	border-right: 1px dotted black;
-	border-bottom:1px dotted black;
-	padding-left: 10px;
-	transition: all .5s ease;
-}
-
-a:hover{
-	background-color: red;
-}
+ 	100%{
+ 		transform: translate(200px, 200px);
+ 	}
+ }

@@ -1,0 +1,122 @@
+@font-face{
+	font-family: 'Cartoonist Kooky';
+	src:url(/fonts/cartoonist_kooky.ttf);
+}
+@font-face{
+	font-family: 'Caledo ';
+	src:url(/fonts/caledo.bold.ttf);
+	font-style: bold;
+}
+@font-face{
+	font-family: 'Calibri';
+	src:url(/fonts/calibri.ttf);
+	
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 20px;
+	
+}
+
+body, html, .box, .wrapper{
+	height: 100%;
+}
+img{
+	max-width: 100%;
+}
+.wrapper{
+	max-width: 1024px;
+	margin: 0 auto;
+	
+}
+
+.box{
+	display: flex;
+	flex-direction: column;
+	
+}
+header{
+	width: 100%;
+	height: 130px;
+	background-color: #000033;
+	padding-left: 6.8359375%;
+	padding-top: 1.953125%;
+	padding-bottom: 2.44140625%;
+	color:#fff;
+
+	
+
+	
+}
+
+.header__text{
+	font-family: 'Cartoonist Kooky';
+	font-size: 1.5rem;
+}
+
+.header__title{
+	font-family: 'Caledo';
+	font-weight: 700;
+	font-size: 2rem;
+}	
+
+main{
+	flex: 1 0 auto;
+	padding-top: 1.7rem;
+	padding-bottom: 1.7rem;
+	padding-left: 3.80859375%;
+	display: flex;
+}
+article{
+	width: 70%;
+}
+
+.article__header{
+	margin: 0 0 1rem;
+	font-family: 'Calibri';
+	font-weight: bold;
+	font-size: 1.6rem;
+
+}
+.article__paragraph{
+	margin-bottom: 1rem;
+	font-family: 'Calibri';
+	font-weight: normal;	
+}
+ol{
+	padding-left: 1em;
+	font-family: 'Calibri';
+	font-weight: normal;	
+}
+
+aside{
+	width: 29%;
+	height: 80vh;
+	border-right: 5px dotted black;
+	border-left: 5px dotted black;
+	padding: 0 10px;
+	overflow-y: scroll;
+}
+
+.aside__box{
+	width: 95%;
+	height: 200px;
+	background-color: black;
+	color: white;
+	margin-bottom: 10px;
+}
+footer{
+	flex: 0 0 auto;
+	height: 50px;
+	width: 100%;
+	background-color: black;
+
+
+}

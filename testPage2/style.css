@@ -1,0 +1,119 @@
+*,::before, ::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+body{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+header{
+	background: linear-gradient(180deg, rgba(56,167,80,1) 0%, rgba(33,83,23,1) 50%, rgba(22,22,15,1) 100%);
+	padding-top: 20px;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px 10px 30px;
+	position: relative;
+	text-align: right;
+
+}
+
+h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 5;
+	font-size: 2.2em;
+	margin: 0 10px 20px 0;
+
+
+}
+
+nav{
+	margin-left: 200px;
+	
+}
+li{
+	display: inline;
+	list-style: none;
+
+}
+
+
+
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 10px 20px;
+	border: 1px solid yellow;
+	border-radius: 10px;
+	background-color: #ECAD3F;
+	transition: transform .5s ease, background-color .2s ease .3s;
+}
+
+a:hover{
+	transform: scale(1.1);
+	background-color: #9D2A37;
+}
+a:active:hover{
+	transform: translate(1px, 2px);
+}
+
+.logo{
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(144,84,189,1) 57%, rgba(150,83,185,1) 61%, rgba(252,70,107,1) 100%);
+	position: absolute;
+	top: 10px;
+	left: 0;
+	border-radius: 50%;
+	z-index: 100;
+
+	animation: logo 3s linear;
+}
+.logo::after{
+	content: '';
+	position: absolute;
+	top:center;
+	left:center;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+}
+
+@keyframes logo{
+	0%{
+		transform: rotate(0) scale(.3);
+		left: 120%;
+	}
+	50%{
+		transform: rotate(-720deg) scale(.5);
+		left:0;
+	}
+	100%{
+		transform: rotate(0) scale(1);
+	}
+}
+
